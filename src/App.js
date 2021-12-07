@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Browser />} />
+          <Route path="/recruitment-tasks" element={<Browser />} />
           <Route path="/browser" element={<Browser />} />
           <Route path="/forms" element={<Forms />} />
           <Route path="/react" element={<ReactTask />} />
