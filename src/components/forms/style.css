@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.container h3 {
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: orange;
+  height: 3rem;
+  padding-top: 0.4rem;
+}
+
+.input-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.priority {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 1rem;
+}
+
+.priority-error {
+  height: 2rem !important;
+  padding-top: 0.1rem;
+  color: orange;
+}
+
+.priority label {
+  padding-left: 0.4rem;
+}
+
+.priority h3 {
+  margin: 0;
+}
+
+.priority p {
+  color: orange;
+  margin: 0;
+  padding-left: 0.4rem;
+}
+
+.priority-error {
+  height: 3rem;
+}
+
+.category {
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: orange;
+}
+
+.category p {
+  padding-left: 0.4rem;
+}
+
+button {
+  margin: 0.4rem 0;
+}
+
+.select-hide {
+  display: none;
+}
+
+.books-wrapper {
+  padding-top: 1rem;
+}
+.books-container {
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  margin: 0 auto;
+  height: auto;
+}
+.books {
+  flex-direction: column;
+  flex-basis: auto;
+  min-width: 250px;
+  text-align: left;
+}

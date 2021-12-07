@@ -1,0 +1,22 @@
+.columns {
+  width: 30%;
+  border: 1px solid white;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.left,
+.right {
+  width: 100%;
+}
+
+button {
+  padding: 0.4rem;
+}
+
+p {
+  padding: 0.4rem 0;
+}
