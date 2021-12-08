@@ -5,6 +5,7 @@ import Navbar from "../Navbar";
 
 const ReactTask = () => {
   const [quotes, setQuotes] = useState([]);
+  const [initialQuote, setInitialQuote] = useState({ quote: "", author: "" });
   const [currentQuote, setCurrentQuote] = useState({ quote: "", author: "" });
   const [quoteList, setQuoteList] = useState([]);
   let idx = quoteList.length;
@@ -21,7 +22,10 @@ const ReactTask = () => {
       .get(
         "https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json"
       )
-      .then((res) => setQuotes(res.data));
+      .then((res) => {
+        setQuotes(res.data);
+        setInitialQuote(res.data[Math.floor(Math.random() * res.data.length)]);
+      });
   }, []);
 
   const showPrevQuote = () => {
@@ -37,8 +41,10 @@ const ReactTask = () => {
     <div>
       <Navbar />
       <div>
-        <h1 className="quote">"{currentQuote && currentQuote.quote}"</h1>
-        <h1>Author: {currentQuote && currentQuote.author}</h1>
+        <h1 className="quote">
+          "{quoteList < initialQuote ? initialQuote.quote : currentQuote.quote}"
+        </h1>
+        <h1>Author: {initialQuote && initialQuote.author}</h1>
       </div>
 
       <button disabled={idx <= 0} onClick={showPrevQuote}>
