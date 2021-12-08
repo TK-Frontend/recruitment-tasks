@@ -44,7 +44,7 @@ const ReactTask = () => {
         <h1 className="quote">
           "{quoteList < initialQuote ? initialQuote.quote : currentQuote.quote}"
         </h1>
-        <h1>Author: {initialQuote && initialQuote.author}</h1>
+        <h1>Author: {quoteList < initialQuote ? initialQuote.author : currentQuote.author}</h1>
       </div>
 
       <button disabled={idx <= 0} onClick={showPrevQuote}>
